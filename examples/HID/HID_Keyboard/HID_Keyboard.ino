@@ -2,6 +2,10 @@
 #define lPin 33
 #define BUTTON_DEBOUNCE_DELAY 1
 
+#define USB_HID_KMJ 1
+#include <usb_hid_device.h>
+
+
 bool isButtonPressed();
 
 void setup() {

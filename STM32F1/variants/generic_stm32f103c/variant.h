@@ -11,4 +11,6 @@
 
 #define portConfigRegister(pin)		( &(PIN_MAP[pin].gpio_device->regs->CRL) )
 
+#define LED_BUILTIN PC13
+
 #endif /* _VARIANT_ARDUINO_STM32_ */
