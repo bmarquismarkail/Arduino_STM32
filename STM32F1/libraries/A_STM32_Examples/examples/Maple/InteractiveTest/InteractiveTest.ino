@@ -23,7 +23,7 @@ const char* dummy_data = ("qwertyuiopasdfghjklzxcvbnmmmmmm,./1234567890-="
 void setup() {
 	Serial.begin(115200); // Ignored by Maple. But needed by boards using hardware serial via a USB to Serial adaptor
     // Set up the LED to blink
-    pinMode(33, OUTPUT);
+    pinMode(32, OUTPUT);
 
     // Start up the serial ports
     Serial1.begin(BAUD);
@@ -48,7 +48,7 @@ void setup() {
 }
 
 void loop () {
-    digitalWrite(33,!digitalRead(33));// Turn the LED from off to on, or on to off
+    digitalWrite(32,!digitalRead(32));// Turn the LED from off to on, or on to off
     delay(100);
 
     while (Serial.available()) {
@@ -248,7 +248,7 @@ void cmd_print_help(void) {
 
 void cmd_adc_stats(void) {
     Serial.println("Taking ADC noise stats.");
-    digitalWrite(33, 0);
+    digitalWrite(32, 0);
     for (uint32 i = 0; i < BOARD_NR_ADC_PINS; i++) {
         delay(5);
         measure_adc_noise(boardADCPins[i]);
@@ -597,7 +597,7 @@ void cmd_board_info(void) {     // TODO print more information
     Serial.println(CYCLES_PER_MICROSECOND);
 
     Serial.print("* 33: ");
-    Serial.println(33);
+    Serial.println(32);
 
     Serial.print("* BOARD_BUTTON_PIN: ");
     Serial.println(BOARD_BUTTON_PIN);

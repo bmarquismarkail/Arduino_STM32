@@ -22,21 +22,21 @@ int sensorValue = 0; // Variable to store the value coming from the sensor
 void setup() {
     // Declare the sensorPin as INPUT_ANALOG:
     pinMode(sensorPin, INPUT_ANALOG);
-    // Declare the LED's pin as an OUTPUT.  (33 is a built-in
+    // Declare the LED's pin as an OUTPUT.  (32 is a built-in
     // constant which is the pin number of the built-in LED.  On the
     // Maple, it is 13.)
-    pinMode(33, OUTPUT);
+    pinMode(32, OUTPUT);
 }
 
 void loop() {
     // Read the value from the sensor:
     sensorValue = analogRead(sensorPin);
     // Turn the LED pin on:
-    digitalWrite(33, HIGH);
+    digitalWrite(32, HIGH);
     // Stop the program for <sensorValue> milliseconds:
     delay(sensorValue);
     // Turn the LED pin off:
-    digitalWrite(33, LOW);
+    digitalWrite(32, LOW);
     // Stop the program for for <sensorValue> milliseconds:
     delay(sensorValue);
 }

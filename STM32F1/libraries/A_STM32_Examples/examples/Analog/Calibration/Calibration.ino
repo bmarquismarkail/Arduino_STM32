@@ -39,8 +39,8 @@ void setup() {
 
     // Turn on the built-in LED to signal the start of the calibration
     // period:
-    pinMode(33, OUTPUT);
-    digitalWrite(33, HIGH);
+    pinMode(32, OUTPUT);
+    digitalWrite(32, HIGH);
 
     // Calibrate during the first five seconds:
     while (millis() < 5000) {
@@ -58,7 +58,7 @@ void setup() {
     }
 
     // Signal the end of the calibration period:
-    digitalWrite(33, LOW);
+    digitalWrite(32, LOW);
 }
 
 void loop() {
@@ -72,5 +72,5 @@ void loop() {
     sensorValue = constrain(sensorValue, 0, 65535);
 
     // Fade the LED using the calibrated value:
-    pwmWrite(33, sensorValue);
+    pwmWrite(32, sensorValue);
 }

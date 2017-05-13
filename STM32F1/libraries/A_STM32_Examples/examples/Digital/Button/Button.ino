@@ -10,7 +10,7 @@
 
 void setup() {
   // Initialize the built-in LED pin as an output:
-  pinMode(33, OUTPUT);
+  pinMode(32, OUTPUT);
   // Initialize the built-in button (labeled BUT) as an input:
   pinMode(BOARD_BUTTON_PIN, INPUT);
 }
@@ -31,6 +31,6 @@ void loop() {
     // Check if the button is pressed.
     if (isButtonPressed()) {
         // If so, turn the LED from on to off, or from off to on:
-        digitalWrite(33,!digitalRead(33));// Turn the LED from off to on, or on to off
+        digitalWrite(32,!digitalRead(32));// Turn the LED from off to on, or on to off
     }
 }

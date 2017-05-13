@@ -37,7 +37,7 @@ int sensorValue = 0;   // the sensor value
 void setup() {
     // set the LED pins as outputs and the switch pin as input:
     pinMode(ledPin, OUTPUT);          // LED on pin 9
-    pinMode(33, OUTPUT);   // Built-in LED
+    pinMode(32, OUTPUT);   // Built-in LED
     pinMode(BOARD_BUTTON_PIN, INPUT); // Built-in button
 }
 
@@ -49,7 +49,7 @@ void loop() {
         calibrate();
     }
     // signal the end of the calibration period
-    digitalWrite(33, LOW);
+    digitalWrite(32, LOW);
 
     // read the sensor:
     sensorValue = analogRead(sensorPin);
@@ -66,7 +66,7 @@ void loop() {
 
 void calibrate() {
     // turn on the built-in LED to indicate that calibration is happening:
-    digitalWrite(33, HIGH);
+    digitalWrite(32, HIGH);
     // read the sensor:
     sensorValue = analogRead(sensorPin);
 

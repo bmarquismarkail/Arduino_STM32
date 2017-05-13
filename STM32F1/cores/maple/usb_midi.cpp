@@ -506,11 +506,11 @@ unsigned int USBMidi::getParam(unsigned int param)
 //  version called.
 /*
 void USBMidi::handleNoteOff(unsigned int channel, unsigned int note, unsigned int velocity) {
-    digitalWrite(33,0);
+    digitalWrite(32,0);
 }
  
 void USBMidi::handleNoteOn(unsigned int channel, unsigned int note, unsigned int velocity) {
-    digitalWrite(33,1);
+    digitalWrite(32,1);
 }
 
 void USBMidi::handleVelocityChange(unsigned int channel, unsigned int note, unsigned int velocity) {}
