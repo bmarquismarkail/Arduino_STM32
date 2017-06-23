@@ -172,15 +172,16 @@ uint8 TwoWire::process(uint8 stop) {
             itc_msg.xferred++;
         }
     }
-    if(stop)
-	i2c_stop();
+    if(stop == true)
+		i2c_stop();
     else i2c_repeated_start();
+	
     return SUCCESS;
 }
 
 // For compatibility with legacy code
 uint8 TwoWire::process(){
-	return process(true)
+	return process(true);
 }
 
 // TODO: Add in Error Handling if pins is out of range for other Maples

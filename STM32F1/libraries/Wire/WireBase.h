@@ -65,6 +65,7 @@ protected:
     boolean tx_buf_overflow;
 
     // Force derived classes to define process function
+    virtual uint8 process(uint8) = 0;
     virtual uint8 process() = 0;
 public:
     WireBase() {}
