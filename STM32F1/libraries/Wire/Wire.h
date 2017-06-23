@@ -86,7 +86,12 @@ class TwoWire : public WireBase {
      * Creates a Stop condition on the bus
      */
     void  i2c_stop();
-
+    
+    /*
+     * Created a Repeated Start condition on the bus
+     */
+    void i2c_repeated_start();
+    
     /*
      * Gets an ACK condition from a slave device on the bus
      */
