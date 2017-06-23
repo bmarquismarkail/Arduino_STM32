@@ -90,6 +90,7 @@ public:
      * Call the process function to process the message if the TX
      * buffer has not overflowed.
      */
+    uint8 endTransmission(uint8);
     uint8 endTransmission(void);
 
     /*
