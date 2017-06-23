@@ -115,6 +115,7 @@ class TwoWire : public WireBase {
     /*
      * Processes the incoming I2C message defined by WireBase
      */
+    uint8 process(uint8);
     uint8 process();
  public:
     /*
