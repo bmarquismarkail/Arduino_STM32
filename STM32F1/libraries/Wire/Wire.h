@@ -116,6 +116,10 @@ class TwoWire : public WireBase {
      * Shifts out the data through SDA and clocks SCL for the slave device
      */
     void i2c_shift_out(uint8);
+	
+	
+
+	
  protected:
     /*
      * Processes the incoming I2C message defined by WireBase
@@ -136,6 +140,11 @@ class TwoWire : public WireBase {
      */
     void begin(uint8 = 0x00);
 
+    /*
+     * Sets pins SDA and SCL to INPUT
+     */
+	void end();	
+	
     /*
      * If object is destroyed, set pin numbers to 0.
      */
